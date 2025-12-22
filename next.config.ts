@@ -1,5 +1,3 @@
-
-
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -7,6 +5,7 @@ const nextConfig: NextConfig = {
     domains: ["img.icons8.com"],
   },
 
+  turbopack: {},
   webpack(config) {
     // 👇 Exclude svg from Next.js default image handling
     config.module.rules.push({
@@ -20,4 +19,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
