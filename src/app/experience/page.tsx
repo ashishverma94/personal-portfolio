@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 import RedirectIcon from "@/assets/icons/Redirect.svg";
 import Link from "next/link";
 
-const BASE_DELAY = 1; // seconds
+const BASE_DELAY = 1; 
   const STAGGER = 0.25;
 
 const Experience = () => {

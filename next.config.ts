@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
     domains: ["img.icons8.com"],
   },
 
-  turbopack: {},
   webpack(config) {
-    // 👇 Exclude svg from Next.js default image handling
     config.module.rules.push({
       test: /\.svg$/,
       issuer: /\.[jt]sx?$/,
