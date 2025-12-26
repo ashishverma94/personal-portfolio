@@ -27,6 +27,7 @@ export const projectData = [
     ),
     link: "https://responsive-dashboard-plu.vercel.app/",
     skills: ["Next.js", "Tailwind CSS", "Typescript"],
+    githubLink: "",
   },
   {
     imgUrl: Proj2Img,
@@ -48,6 +49,7 @@ export const projectData = [
     ),
     link: "https://movie-next-project.vercel.app/",
     skills: ["Next.js", "CSS", "Javascript"],
+    githubLink: "https://github.com/ashishverma94/Movie_Next_Project",
   },
   {
     imgUrl: Proj3Img,
@@ -70,6 +72,7 @@ export const projectData = [
     ),
     link: "https://zupay-blog-frontend.vercel.app/",
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Zustand"],
+    githubLink: "https://github.com/ashishverma94/zupay-blog",
   },
   {
     imgUrl: Proj4Img,
@@ -96,6 +99,7 @@ export const projectData = [
     ),
     link: "https://youtube-player-notes.vercel.app/",
     skills: ["React.js", "CSS", "Javascript"],
+    githubLink: "https://github.com/ashishverma94/Youtube-Player-Notes",
   },
   {
     imgUrl: Proj5Img,
@@ -114,6 +118,7 @@ export const projectData = [
     ),
     link: "https://usability-clone-three.vercel.app/",
     skills: ["HTML", "CSS", "Responsive Design"],
+    githubLink: "https://github.com/ashishverma94/Usability_Clone",
   },
 ];
 
@@ -238,7 +243,7 @@ export const ExperienceData = [
     icon: PlouImg,
     company: "Puresoft Labs",
     role: "Fullstack Developer",
-    duration: "Jan 2022 - Present",
+    duration: "Dec 2024 - Present",
     description: [
       "Developed responsive web applications using React and Next.js.",
       "Collaborated with designers to create seamless UI/UX.",
@@ -250,7 +255,7 @@ export const ExperienceData = [
     icon: DualImg,
     company: "Dualite",
     role: "Frontend Intern",
-    duration: "Jun 2020 - Dec 2021",
+    duration: "Sep 2024 - Dec 2024",
     description: [
       "Built RESTful APIs with Node.js and Express.",
       "Designed MongoDB and PostgreSQL database schemas.",
@@ -262,7 +267,7 @@ export const ExperienceData = [
     icon: AFImg,
     company: "Affiliate Daddy",
     role: "Frontend Intern",
-    duration: "Jan 2020 - May 2020",
+    duration: "Apr 2024 - Aug 2020",
     description: [
       "Assisted in developing full-stack applications using MERN stack.",
       "Performed code reviews and wrote unit tests.",

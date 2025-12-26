@@ -37,7 +37,6 @@ const Experience = () => {
 
       <div className="w-full max-w-5xl flex flex-col gap-6 h-full overflow-scroll scroll scroll-smooth">
         {ExperienceData.map((exp, index) => (
-        //   <ExperienceCard key={idx} {...exp} />
          <div
            key={index}
           className="animate__animated animate__fadeInUp"

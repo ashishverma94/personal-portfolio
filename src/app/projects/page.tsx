@@ -18,8 +18,6 @@ const Projects = () => {
     }, 4000);
   }, []);
 
-
-
   return (
     <div className="h-screen flex flex-col w-full items-center p-6 gap-6 text-[#000000]">
       <h1 className="text-center text-[40px] font-extrabold">
@@ -43,15 +41,7 @@ const Projects = () => {
 
       <div className="w-full flex flex-col gap-25 pt-26 h-full overflow-y-scroll scroll">
         {projectData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            index={index}
-            imgUrl={project.imgUrl}
-            heading={project.heading}
-            desc={project.desc}
-            link={project.link}
-            skills={project.skills}
-          />
+          <ProjectCard key={index} id={index} {...project} />
         ))}
         <div className="w-full min-h-25"></div>
       </div>
@@ -62,27 +52,31 @@ const Projects = () => {
 export default Projects;
 
 interface IProject {
-  index: number;
   imgUrl: StaticImageData;
   heading: string;
   desc: ReactNode;
   link: string;
-  skills?: string[];
+  skills: string[];
+  githubLink: string;
+  key: number;
+  id: number;
 }
 
 const ProjectCard: FC<IProject> = ({
   imgUrl,
-  index,
   heading,
   desc,
   link,
   skills,
+  githubLink,
+  key,
+  id,
 }) => {
   const [showQR, setShowQR] = useState(false);
   return (
     <div
       className={`min-h-75 w-full flex gap-10 max-w-300 mx-auto justify-center items-center ${
-        index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+        id % 2 === 0 ? "flex-row" : "flex-row-reverse"
       }`}
     >
       <div className="bg-[black] p-1 h-full rounded-[19px] text-white">
@@ -99,7 +93,7 @@ const ProjectCard: FC<IProject> = ({
             <div className="size-8 absolute bg-transparent -right-8 rounded-tl-2xl shadow-[black_-16px_-8px_0px]"></div>
             <div className="size-8 absolute bg-transparent -bottom-8 rounded-tl-2xl shadow-[black_-16px_-8px_0px]"></div>
             <div className="w-full h-full justify-center items-center flex font-extrabold text-3xl">
-              {index < 9 ? `0${index + 1}` : index + 1}
+              {id < 9 ? `0${id + 1}` : id + 1}
             </div>
           </div>
         </div>
@@ -119,17 +113,13 @@ const ProjectCard: FC<IProject> = ({
           ))}
         </div>
         <div className="inline-flex w-min gap-3 items-center">
-          <button
-
-            onClick={() => setShowQR(true)}
-          >
-            < RiGithubLine  className="size-6.5 hover:scale-110 transition-all duration-200 cursor-pointer"/>
-          </button>
-          <button
-
-            onClick={() => setShowQR(true)}
-          >
-            < IoQrCode  className="size-5.5 hover:scale-110 transition-all duration-200 cursor-pointer"/>
+          {githubLink && (
+            <Link href={githubLink} target="_blank">
+              <RiGithubLine className="size-6.5 hover:scale-110 transition-all duration-200 cursor-pointer" />
+            </Link>
+          )}
+          <button onClick={() => setShowQR(true)}>
+            <IoQrCode className="size-5.5 hover:scale-110 transition-all duration-200 cursor-pointer" />
           </button>
           <Link href={link} target="_blank">
             <RedirectIcon className="hover:scale-110 transition-all duration-200" />
